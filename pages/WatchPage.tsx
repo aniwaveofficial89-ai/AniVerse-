@@ -18,7 +18,8 @@ const SeekForwardIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" fill="non
 const SeekBackwardIcon = () => (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10"><path strokeLinecap="round" strokeLinejoin="round" d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" /></svg>);
 
 // --- HELPER COMPONENTS ---
-const EpisodeListItem = ({ animeId, episode, isActive }: { animeId: string; episode: Episode; isActive: boolean }) => (
+// Fix: Define EpisodeListItem as a React.FC to correctly handle the 'key' prop during list rendering.
+const EpisodeListItem: React.FC<{ animeId: string; episode: Episode; isActive: boolean }> = ({ animeId, episode, isActive }) => (
     <Link to={`/watch/${animeId}/${episode.id}`} className={`flex items-center gap-4 p-2 rounded-lg transition-colors ${isActive ? 'bg-purple-600/30' : 'hover:bg-slate-700/80'}`}>
         <img src={episode.thumbnailUrl} alt={episode.title} className="w-28 h-auto object-cover aspect-video rounded-md flex-shrink-0" />
         <div className="flex-grow overflow-hidden">

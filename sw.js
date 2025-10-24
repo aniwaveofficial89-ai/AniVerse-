@@ -1,9 +1,9 @@
 const CACHE_NAME = 'aniverse-cache-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/index.tsx',
-  '/favicon.svg',
+  './',
+  './index.html',
+  './index.tsx',
+  './favicon.svg',
   // CDN assets
   'https://cdn.tailwindcss.com',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap',
@@ -13,11 +13,11 @@ const urlsToCache = [
   'https://aistudiocdn.com/react-router-dom@^7.9.4',
   'https://aistudiocdn.com/@google/genai@^0.15.0',
   // Default avatars
-  '/avatars/avatar1.png',
-  '/avatars/avatar2.png',
-  '/avatars/avatar3.png',
-  '/avatars/avatar4.png',
-  '/avatars/avatar5.png',
+  './avatars/avatar1.png',
+  './avatars/avatar2.png',
+  './avatars/avatar3.png',
+  './avatars/avatar4.png',
+  './avatars/avatar5.png',
 ];
 
 self.addEventListener('install', event => {

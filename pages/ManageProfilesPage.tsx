@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from '../types';
 
 const AVATARS = [
-    '/avatars/avatar1.png',
-    '/avatars/avatar2.png',
-    '/avatars/avatar3.png',
-    '/avatars/avatar4.png',
-    '/avatars/avatar5.png',
+    './avatars/avatar1.png',
+    './avatars/avatar2.png',
+    './avatars/avatar3.png',
+    './avatars/avatar4.png',
+    './avatars/avatar5.png',
 ];
 
 const PencilIcon: React.FC<{className?: string}> = ({className}) => (

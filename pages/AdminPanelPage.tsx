@@ -164,22 +164,22 @@ const AdminPanelPage: React.FC = () => {
         setIsUploading(true);
 
         try {
-            const posterUrl = newSeriesData.posterFile ? await readFileAsDataURL(newSeriesData.posterFile) : '/posters/placeholder.jpg';
-            const bannerUrl = newSeriesData.bannerFile ? await readFileAsDataURL(newSeriesData.bannerFile) : '/banners/placeholder.jpg';
+            const posterUrl = newSeriesData.posterFile ? await readFileAsDataURL(newSeriesData.posterFile) : './posters/placeholder.jpg';
+            const bannerUrl = newSeriesData.bannerFile ? await readFileAsDataURL(newSeriesData.bannerFile) : './banners/placeholder.jpg';
             
             const episodesWithDataUrls = await Promise.all(
                 newSeriesData.episodes.map(async (ep, index) => {
-                    const thumbnailUrl = ep.thumbnailFile ? await readFileAsDataURL(ep.thumbnailFile) : '/thumbnails/placeholder.jpg';
+                    const thumbnailUrl = ep.thumbnailFile ? await readFileAsDataURL(ep.thumbnailFile) : './thumbnails/placeholder.jpg';
                     const tracks = await Promise.all(
                         ep.tracks.map(async (track: any) => ({
                             lang: track.lang,
-                            url: track.videoFile ? await readFileAsDataURL(track.videoFile) : '/videos/placeholder.mp4'
+                            url: track.videoFile ? await readFileAsDataURL(track.videoFile) : './videos/placeholder.mp4'
                         }))
                     );
                     const subtitles = await Promise.all(
                         ep.subtitles.map(async (sub: any) => ({
                             lang: sub.lang,
-                            url: sub.subtitleFile ? await readFileAsDataURL(sub.subtitleFile) : '/subtitles/placeholder.vtt'
+                            url: sub.subtitleFile ? await readFileAsDataURL(sub.subtitleFile) : './subtitles/placeholder.vtt'
                         }))
                     );
 

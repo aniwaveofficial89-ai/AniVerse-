@@ -4,13 +4,13 @@
   "description": "A sleek, mobile-first OTT anime streaming web app designed to deliver a smooth, cinematic experience. It allows users to watch anime directly within the app, browse by genres, search titles, and explore detailed anime pages.",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "./icons/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "./icons/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"

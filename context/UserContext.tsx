@@ -17,7 +17,7 @@ const getInitialUsers = (): User[] => {
         email: ADMIN_EMAIL,
         password: 'admin123',
         name: 'Admin',
-        avatarUrl: '/avatars/avatar1.png'
+        avatarUrl: './avatars/avatar1.png'
       });
     }
     return users;
@@ -29,7 +29,7 @@ const getInitialUsers = (): User[] => {
         email: ADMIN_EMAIL,
         password: 'admin123',
         name: 'Admin',
-        avatarUrl: '/avatars/avatar1.png'
+        avatarUrl: './avatars/avatar1.png'
       }
     ];
   }
@@ -108,7 +108,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       email,
       password,
       name: name.trim(),
-      avatarUrl: `/avatars/avatar${Math.ceil(Math.random() * 5)}.png`
+      avatarUrl: `./avatars/avatar${Math.ceil(Math.random() * 5)}.png`
     };
 
     setUsers(prev => [...prev, newUser]);
